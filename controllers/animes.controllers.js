@@ -6,7 +6,7 @@ function findAllAnimes(req, res) {
 }
 
 function findAnimeById(req, res) {
-    const id = req.params.id
+    const id = +req.params.id
     const selectedAnime = animesService.findAnimeById(id)
     res.send(selectedAnime)
 }

@@ -14,8 +14,10 @@ class CharacterEntity {
         if (!this.name) {
             throw new Error('Insira um nome válido para o personagem!') 
         }
-        if (!this.age || this.age < 0) {
+        if (!this.age) {
             throw new Error('Insira uma idade válida para o personagem! Use apenas números.') 
+        } else if (this.age == 0) {
+            throw new Error('Idade nao pode ser igual ou menor que zero. Tente novamente.')
         }
     }
     //apos a validação,aaplicação irá retornar o personagem
